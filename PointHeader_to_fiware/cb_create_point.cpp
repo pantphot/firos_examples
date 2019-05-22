@@ -21,19 +21,21 @@ int main(int argc, char *argv[])
     }
     else
     {
-      url = "localhost:1026";
+      url = "155.207.33.189:1026";
     }
     curlpp::Cleanup cleaner;
     curlpp::Easy request;
-    
+
     request.setOpt(new curlpp::options::Url(url + "/v2/entities"));
     request.setOpt(new curlpp::options::Verbose(true));
-    
+
     std::list<std::string> header;
     header.push_back("Content-Type: application/json");
     request.setOpt(new curlpp::options::HttpHeader(header));
-    
-    std::string json =" {\"id\": \"Point\",\"type\": \"Point\",\
+
+    std::string json =" {\"id\": \"PointHeader\",\"type\": \"PointHeader\",\
+    \"frame_id\": {\"value\": 0, \"type\": \"Number\"},\
+    \"stamp\": {\"value\": 0, \"type\": \"Number\"},\
     \"x\": {\"value\": 0, \"type\": \"Number\"},\
     \"y\": {\"value\": 0, \"type\": \"Number\"},\
     \"z\": {\"value\": 0, \"type\": \"Number\"}}";
@@ -42,12 +44,12 @@ int main(int argc, char *argv[])
 
     request.setOpt(new curlpp::options::PostFields(json));
     request.setOpt(new curlpp::options::PostFieldSize(json.length()));
-    
+
     std::ostringstream response;
     request.setOpt(new curlpp::options::WriteStream(&response));
-    
+
     request.perform();
-    
+
     cout << response.str() << endl;
   }
   catch ( curlpp::LogicError & e ) {
@@ -56,7 +58,6 @@ int main(int argc, char *argv[])
   catch ( curlpp::RuntimeError & e ) {
     std::cout << e.what() << std::endl;
   }
-  
+
   return EXIT_SUCCESS;
 }
-

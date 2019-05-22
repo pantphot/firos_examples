@@ -1,4 +1,4 @@
-project(point_to_ngsiv2)
+project(PointHeader_to_ngsiv2)
 cmake_minimum_required(VERSION 2.9)
 
 include(CheckCXXCompilerFlag)
