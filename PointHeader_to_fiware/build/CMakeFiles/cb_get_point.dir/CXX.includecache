@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ros2/firos2/firos_examples/PointHeader_to_fiware/cb_get_point.cpp
+iostream
+-
+sstream
+-
+string
+-
+unistd.h
+-
+curlpp/cURLpp.hpp
+-
+curlpp/Easy.hpp
+-
+curlpp/Options.hpp
+-
+

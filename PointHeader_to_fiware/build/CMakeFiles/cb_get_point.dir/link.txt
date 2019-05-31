@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/cb_get_point.dir/cb_get_point.cpp.o  -o cb_get_point -L/usr/lib/x86_64-linux-gnu -lcurl -lcurlpp 

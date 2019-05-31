@@ -21,7 +21,7 @@ using eprosima::fastrtps::rtps::SerializedPayload_t;
 extern "C" void USER_LIB_EXPORT transform(SerializedPayload_t *serialized_input, SerializedPayload_t *serialized_output){
     // User types
     nettools_msgs::msg::dds_::PointHeader_ point;
-    geometry_msgs::msg::dds_::PointHeader_PubSubType point_pst;
+    nettools_msgs::msg::dds_::PointHeader_PubSubType point_pst;
     std::string data;
     JsonNGSIv2PubSubType string_pst;
     JsonNGSIv2 string_data;
@@ -31,7 +31,7 @@ extern "C" void USER_LIB_EXPORT transform(SerializedPayload_t *serialized_input,
     double zero = 0.0 ;
     if (point.x_() != 0){
       json = "{\"stamp\":{ \"value\":"+ std::to_string(point.stamp_()) +"}, \
-      \"frame_id\":{ \"value\":"+ std::to_string(point.frame_id_()) +"}, \
+      \"frame_id\":{ \"value\":"+ point.frame_id_() +"}, \
       \"x\":{ \"value\":"+ std::to_string(point.x_()) +"}, \
       \"y\": { \"value\":"+ std::to_string(point.y_()) + "}, \
       \"z\": { \"value\":"+ std::to_string(point.z_()) + "}}";
@@ -39,7 +39,7 @@ extern "C" void USER_LIB_EXPORT transform(SerializedPayload_t *serialized_input,
     else{
       std::cout<<"entered!"<<std::endl;
       json = "{\"stamp\":{ \"value\":"+ std::to_string(point.stamp_()) +"}, \
-      \"frame_id\":{ \"value\":"+ std::to_string(point.frame_id_()) +"}, \
+      \"frame_id\":{ \"value\":"+ point.frame_id_() +"}, \
       \"x\":{ \"value\":"+ std::to_string(zero) +"}, \
       \"y\": { \"value\":"+std::to_string(zero)+ "}, \
       \"z\": { \"value\":"+std::to_string(zero)+"}}";

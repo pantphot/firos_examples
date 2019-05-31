@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/cb_create_point.dir/cb_create_point.cpp.o  -o cb_create_point -L/usr/lib/x86_64-linux-gnu -lcurl -lcurlpp 

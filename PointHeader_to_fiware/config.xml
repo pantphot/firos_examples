@@ -1,0 +1,29 @@
+                                                                
+
+<?xml version="1.0"?>
+<is>
+        <bridge>
+                <bridge_type>unidirectional</bridge_type>
+                <subscriber>
+                        <participant>ros2_subscriber</participant>
+                        <domain>0</domain>
+                        <topic>rt/detected_point</topic>
+                        <type>nettools_msgs::msg::dds_::PointHeader_</type>
+                        <partition></partition>
+                </subscriber>
+                <publisher>
+                        <participant>ngsiv2_publisher</participant>
+                        <id>PointHeader</id>
+                        <host>localhost</host>
+                        <port>1026</port>
+                </publisher>
+	        <transformToNGSIv2>/home/ros2/firos2/firos_examples/PointHeader_to_fiware/build/libuserlib.so</transformToNGSIv2>
+                <bridge_library>libisrtpsngsiv2bridgelib.so</bridge_library>
+        </bridge>
+</is>
+
+
+
+
+
+

@@ -28,10 +28,6 @@
 
 #include "PointHeader_.h"
 
-#if !defined(GEN_API_VER) || (GEN_API_VER != 1)
-#error Generated PointHeader_ is not compatible with current installed Fast-RTPS. Please, regenerate it with fastrtpsgen.
-#endif
-
 namespace nettools_msgs
 {
     namespace msg
@@ -52,7 +48,7 @@ namespace nettools_msgs
             	virtual bool deserialize(eprosima::fastrtps::rtps::SerializedPayload_t *payload, void *data) override;
                 virtual std::function<uint32_t()> getSerializedSizeProvider(void* data) override;
             	virtual bool getKey(void *data, eprosima::fastrtps::rtps::InstanceHandle_t *ihandle,
-            		bool force_md5 = false) override;
+            		bool force_md5 = false);
             	virtual void* createData() override;
             	virtual void deleteData(void * data) override;
             	MD5 m_md5;
