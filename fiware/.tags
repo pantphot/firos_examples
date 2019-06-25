@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+mongo	/home/ros2/fiware/docker-compose.yml	/^mongo:$/;"	function	line:1
+image	/home/ros2/fiware/docker-compose.yml	/^  image: mongo:3.6$/;"	function	line:2
+command	/home/ros2/fiware/docker-compose.yml	/^  command: --nojournal$/;"	function	line:3
+orion	/home/ros2/fiware/docker-compose.yml	/^orion:$/;"	function	line:4
+image	/home/ros2/fiware/docker-compose.yml	/^  image: fiware\/orion$/;"	function	line:5
+links	/home/ros2/fiware/docker-compose.yml	/^  links:$/;"	function	line:6
+ports	/home/ros2/fiware/docker-compose.yml	/^  ports:$/;"	function	line:8
+command	/home/ros2/fiware/docker-compose.yml	/^  command: -dbhost mongo$/;"	function	line:10
